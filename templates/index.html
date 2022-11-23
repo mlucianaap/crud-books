@@ -1,24 +1,50 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Página 1</title>
-    <link rel="stylesheet" href="questao6.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Livros</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Tauri&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@200;300&family=Tauri&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Interação Node.js e MySQL</h1>
-    <form action='/books/insertbook' method='POST'>
-        <div class="form-control">
-            <label for="title">Título: </label>
-            <input type="text" name="title" placeholder="Digite o título do livro"/>
-        </div>
-        <div class="form-control">
-            <label for="pages">Qdt. de páginas: </label>
-            <input type="number" name="pages" placeholder="Digite o número de páginas"/>
-        </div>
-        <div>
-            <input type="submit" value="Cadastrar"/>
-        </div>
+    <header>
+        <h1>Biblioteca</h1>
+        <h2>Controle de Livros</h2>
+    </header>
+
+    <form action="/cadastro" method="POST">
+        <h1>Cadastro de Livros</h1>
+
+            <div>
+                <label for="titulo"></label>
+                <input type="text" id="titulo" placeholder="Título"/>
+            </div>
+    
+            <div>
+                <label for="autor"></label>
+                <input type="text" id="autor" placeholder="Autor"/>
+            </div>
+    
+            <div>
+                <label for="pages"></label>
+                <input type="number" id="pages" placeholder="Quantidade de Páginas"/>
+            </div>
+    
+            <div>
+                <label for="ano"></label>
+                <input type="number" id="ano" placeholder="Ano"/>
+            </div>
+
+        <input type="submit" class="cadastrar" value="Cadastrar">
     </form>
 </body>
 </html>
