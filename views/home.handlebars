@@ -1,32 +1,35 @@
-<form action="/insert" method='POST'>
-	<div class="form-header">
-		<h1>Cadastro de Livros</h1>
-	</div>
+<div>
+	<form action="/insert" method='POST'>
+		<div class="form-header">
+			<h1>Cadastro de Livros</h1>
+		</div>
 
-	<input name="title" type="text" placeholder="Título" required>
-	<input name="pages" type="number" placeholder="Quantidade de páginas" required>
-	<button type="submit">Cadastrar</button>
-</form>
+		<input name="title" type="text" placeholder="Título" required>
+		<input name="pages" type="number" placeholder="Quantidade de páginas" required>
+		<button type="submit">Cadastrar</button>
+	</form>
 
-<table>
-	<tr>
-		<th>Nome</th>
-		<th>Quantidade de Páginas</th>
-		<th>Ações</th>
-	</tr>
-	{{#each books}}
+	<table>
 		<tr>
-			<td name="id" style="display: none;">{{idbooks}}</td>
-			<td name="title">{{title}}</td>
-			<td name="pages">{{pages}}</td>
-			<td>
-				<a href="/edit/{{idbooks}}">
-					<button>Editar</button>
-				</a>
-				<a href="/delete/{{idbooks}}">
-					<button>Apagar</button>
-				</a>
-			</td>
+			<th>Nome</th>
+			<th>Quantidade de Páginas</th>
+			<th>Ações</th>
 		</tr>
-  	{{/each}}
-</table>
+		{{#each books}}
+			<tr>
+				<td name="id" style="display: none;">{{idbooks}}</td>
+				<td name="title">{{title}}</td>
+				<td name="pages">{{pages}}</td>
+				<td>
+					<a href="/edit/{{idbooks}}">
+						<button>Editar</button>
+					</a>
+					<a href="/delete/{{idbooks}}">
+						<button>Apagar</button>
+					</a>
+				</td>
+			</tr>
+		{{/each}}
+	</table>
+</div>
+
