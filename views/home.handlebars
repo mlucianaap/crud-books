@@ -1,0 +1,43 @@
+<header>
+	<h1>Biblioteca</h1>
+	<h2>Controle de Livros</h2>
+</header>
+
+<form action="/books/insertbook" method='POST'>
+	<div class="form-header">
+		<h1>Cadastro de Livros</h1>
+	</div>
+
+	<div class="input-box">
+		<input name="title" type="text" placeholder="Digite o título do livro" required>
+	</div>
+	
+	<div class="input-box">
+		<input name="pages" type="number" placeholder="Digite o número de páginas" required>
+	</div>
+	<div class="input-box">
+		<button type="submit">Cadastrar</button>
+	</div>
+
+	{{#each books}}
+	 <h1>{{title}}</h1>
+	 <h1>{{pages}}</h1>
+  	{{/each}}
+</form>
+
+
+
+{{!-- <table>
+  <tr>
+    <th>ID</th>
+    <th>Nome</th>
+    <th>Quantidade de Páginas</th>
+	<th>Ações</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+	<td>Germany</td>
+  </tr>
+</table> --}}
