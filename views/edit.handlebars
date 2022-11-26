@@ -1,0 +1,22 @@
+{{#each book}}
+	<form action="/edit" method='POST'>
+		<div class="form-header">
+			<h1>Edição de Livros</h1>
+		</div>
+
+		<div class="input-box">
+			<input name="idbooks" type="hidden" value="{{idbooks}}" required>
+		</div>
+		
+		<div class="input-box">
+			<input name="title" type="text" placeholder="Título" required value="{{title}}">
+		</div>
+		
+		<div class="input-box">
+			<input name="pages" type="number" placeholder="Quantidade de páginas" required value="{{pages}}">
+		</div>
+		<div class="input-box">
+			<button type="submit">Editar</button>
+		</div>
+	</form>
+{{/each}}

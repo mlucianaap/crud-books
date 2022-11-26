@@ -1,4 +1,4 @@
-/* *{
+*{
     margin: 0;
     padding: 0;
 }
@@ -102,4 +102,8 @@ form div + div {
 ::placeholder{
     color:#2B2136;
     padding: 20px;
-} */
+}
+
+table, th, td {
+    border:1px solid black;
+}
