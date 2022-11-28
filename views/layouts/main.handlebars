@@ -58,10 +58,11 @@
     .livro {
         margin: 0 auto;
         background-color: #FFFFFF;
-        width: 90%;
-        height: 95%;
+        width: auto;
+        height: auto;
         box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
         border-radius: 25px;
+        
     }
 
     .livro h1 {
@@ -155,10 +156,12 @@
 
     #edicao{
         margin: 0 auto;
-        margin-top: 3em;
+        position: absolute;
+        margin-left: 25em;
+        margin-top: 13em;
         background-color: #FFFFFF;
-        width: 60%;
-        height: 60%;
+        width: auto;
+        height: 55%;
         box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
         border-radius: 25px;
                 
@@ -174,9 +177,9 @@
   #tituloedit{
     box-sizing: border-box;
 
-    width: 894px;
+    width: 700px;
     height: 69px;
-    margin-left: 4em;
+    margin-left: 5em;
     top: 433px;
     margin-bottom: 0.5em;
 
@@ -189,9 +192,9 @@
   #pageedit{
     box-sizing: border-box;
 
-    width: 894px;
+    width: 700px;
     height: 69px;
-    margin-left: 4em;
+    margin-left: 5em;
     top: 433px;
     margin-bottom: 0.5em;
 
@@ -203,7 +206,7 @@
 
   #butonedit{
      margin-top: 10px;
-     margin-left: 4em;  
+     margin-left: 5em;  
      height: 67px;
      background: #2B2136;
      border-radius: 10px;
@@ -214,10 +217,76 @@
      font-size: 24px;
      color: #FFFFFF;
      box-sizing: border-box;   
-     width: 894px;
+     width: 700px;
      cursor: pointer;
 
   }
+
+  @media (max-width: 1300px){
+    .livro .cadastro input{ 
+        flex-direction: row;
+        margin-top: 25px; 
+        margin-right: 1.2em;
+        width: 350px;
+        height: 65px;
+    }
+
+    form button{
+        margin-top: 25px;
+        width: 150px;
+        height: 65px;
+        font-size: 23px;
+        text-align: center;
+    }
+
+  }
+
+   @media (max-width: 1550px){
+    .livro .cadastro input{ 
+        flex-direction: row;
+        margin-top: 25px; 
+        margin-right: 1.2em;
+        width: 350px;
+        height: 65px;
+    }
+
+    form button{
+        margin-top: 25px;
+        width: 150px;
+        height: 65px;
+        font-size: 23px;
+        text-align: center;
+    }
+
+  }
+
+  @media (max-width: 1350px){
+    #edicao{
+        width: auto;
+        height: 58%;
+    }
+
+    .form-header h1{
+        margin-top: 40px;
+        margin-bottom: 10px;
+        margin-left: 2.1em;
+        font-size: 30px;
+        font-family: 'Tauri', sans-serif;
+    }
+    
+    #tituloedit{
+        margin-left: 3em;
+    }
+
+    #pageedit{
+        margin-left: 3em;
+    }
+
+    #butonedit{
+        margin-left: 3em;
+    }
+  }
+
 
   </style>
     
