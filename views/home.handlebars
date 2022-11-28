@@ -1,17 +1,18 @@
-<div>
+<div class="livro">
 	<form action="/insert" method='POST'>
-		<div class="form-header">
-			<h1>Cadastro de Livros</h1>
-		</div>
+		<h1>Cadastro de Livro</h1>		
 
-		<input name="title" type="text" placeholder="Título" required>
-		<input name="pages" type="number" placeholder="Quantidade de páginas" required>
-		<button type="submit">Cadastrar</button>
+			<div class="cadastro">
+				<input name="title" type="text" placeholder="Título" required>
+				<input name="pages" type="number" placeholder="Quantidade de páginas" required>
+				<button type="submit">Cadastrar</button>
+			</div>
 	</form>
-
+	
+	<div class="dados">
 	<table>
 		<tr>
-			<th>Nome</th>
+			<th>Título</th>
 			<th>Quantidade de Páginas</th>
 			<th>Ações</th>
 		</tr>
@@ -31,5 +32,6 @@
 			</tr>
 		{{/each}}
 	</table>
+	</div>
 </div>
 
