@@ -2,293 +2,174 @@
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
-	<link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/logo.png" type="image/png">
     <title>Controle de Livros</title>
     <script src="https://kit.fontawesome.com/6988af4e51.js" crossorigin="anonymous" defer></script>
     <style>
-    *{
-        margin: 0;
-        padding: 10px;
-    }
-
-    .header1 {
-        float: left;
-        width: 110px;
-    }
-
-    .header2 {
-        float:left;      
-    }
-
-    .header2 h1 {
-        font-size: 40px;
-        font-weight: 400;
-        margin-bottom: 1px;
-        margin: 20px 0px 0px 0px;
-        padding: 5px 0px 0px 5px;
-        font-family: 'Tauri', sans-serif;
-        color: #2B2136;
-    }
-
-    .header2 h2{
-        font-family: 'Tauri', sans-serif;
-        font-size: 20px;
-        font-weight: 400;
-        padding: 0px 0px 0px 5px;
-        color: #99959D;
-    }
-
-    body{
-        width: 100%;
-        height: 100vh;
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Tauri&display=swap');
         
-        display: flex;
-        flex-direction: column;
+        * {
+            margin: 0;
+            padding: 0px;
+            font-family: 'Inter', sans-serif;
+        }
 
-        background-color: #F5F5F5;
-    }
+        body {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            background-color: #F8F8F8; 
+            color: #2B2136;
+            padding-bottom: 10vh;
+            padding-top: 3vh;
+        }
 
-    form h1{
-        font-family: sans-serif;
-        margin-bottom: 1.6em;
-        margin-right: 0em;
-    }
+        body #edit {
+            margin-top: 15vh;
+        }
 
-    .livro {
-        margin: 0 auto;
-        background-color: #FFFFFF;
-        width: auto;
-        height: auto;
-        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
-        border-radius: 25px;
-        
-    }
+        .container {
+            width: 50%;
+            background-color: white;
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
+        }
 
-    .livro h1 {
-        margin-top: 40px;
-        margin-bottom: 10px;
-        margin-left: 5em;
-        font-family: 'Tauri', sans-serif;
-    }
+        .form-header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
 
-    .livro .cadastro {
-        width: 90%;
-        margin-left: 10em;
-    }
+        .header1 {
+            padding-right: 1.5rem;
+        }
 
-    .livro .cadastro input{
-        box-sizing: border-box; 
-        margin-top: 10px; 
-        margin-right: 2em;
-        width: 500px;
-        height: 69px;
-        float: left;
-        background: #FFFFFF;
-        border: 3px solid #F5F5F5;
-        border-radius: 10px;
-        font-family: 'Inter', sans-serif;
-        font-size: 20px;
-    }
+        .header2 h1, h2 {
+            font-family: 'Tauri', sans-serif;
+            font-weight: 400;
+        }
 
-    form button{
-        margin-top: 10px;
-        margin-left: 10px;    
-        height: 67px;
-        float: left;
-        background: #2B2136;
-        border-radius: 10px;
-        font-family: 'Inter';
-        text-align: center;
-        font-weight: 700;
-        font-size: 24px;
-        text-align: center;
-        color: #FFFFFF;
-        box-sizing: border-box;
-        padding: 20px;    
-        width: 200px;
-        cursor: pointer;
-    }
+        .header2 h1 {
+            font-size: 40;
+            color: #2B2136;
+        }
 
-    .dados {
-        margin-top: 100px;
-        padding: 1em;
-        border-radius: 25px;
-        margin-right: 2em ;
-        font-size: 23px;
-        text-align: center;
-    }
+        .header2 h2 {
+            font-size: larger;
+            color: #99959D;
+        }
 
-    .dados table {
-        margin: 0;
-        border: 20px;
-        border-radius: 20px;
-        border-color: pink;
-        width: 100%;
-        font-family: 'Tauri', sans-serif;
-    }
+        form button {
+            margin-top: 2rem;
+            border: none;
+            background-color: #2B2136;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 700;
+            color: #fff;
+            border-radius: 0.4rem;
+            padding: 0.9rem 0;
+            padding-left: auto;
+            padding-right: auto;
+            cursor: pointer;
+            transition: 0.3s;
+        }
 
-    .dados table td {
-        padding: 10px;
-    }
+        button:hover {
+            background-color: black;
+        }
 
-    ::placeholder{
-        color:#2B2136;
-        padding: 20px;
-        text-align: center;
-    }
+        .input-box {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1.1rem;
+        }
 
-    #editar{
-        background-color:#F0AD02;
-        color: white;
-        border-radius: 10px;
-    }
+        .input-box input {
+            margin: 0.6rem 0;
+            padding: 0.8rem 1.2rem;
+            font-size: 1rem;
+            border: 1px solid #dcdcdc;
+            border-radius: 5px;
+        }
 
-    #trash{
-        background-color:#EA6055;
-        color: white;
-        border-radius: 10px;
-    }
+        .input-box input:focus-visible {
+            outline: 0px;
+            background-color: #eeeeee75;
+        }
 
-    a{
-        text-decoration: none;
-    }
+        .input-box select:focus-visible {
+            outline: 0px;
+        }
 
-    #edicao{
-        margin: 0 auto;
-        position: absolute;
-        margin-left: 12em;
-        margin-top: 2em;
-        background-color: #FFFFFF;
-        width: 70%;
-        height: 90%;
-        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
-        border-radius: 25px;
-                
-    }
+        .input-box {
+            padding-top: 1rem;
+            font-weight: 600;
+            color: #000000c0;
+        }
 
-    .form-header h1{
-        margin-top: 40px;
-        margin-bottom: 10px;
-        margin-left: 3.5em;
-        font-family: 'Tauri', sans-serif;
-    }
+        table {
+            margin-top: 3rem;
+        }
 
-  #tituloedit{
-    box-sizing: border-box;
+        tr {
+            height: 3rem;
+        }
 
-    width: 700px;
-    height: 69px;
-    margin-left: 5em;
-    top: 433px;
-    margin-bottom: 0.5em;
+        th {
+            border-bottom: 1px solid #F8F7F9;
+            border-top: 1px solid #F8F7F9;
+            height: 3rem;
+        }
 
-    background: #FFFFFF;
-    border: 3px solid #F5F5F5;
-    border-radius: 10px;
-    font-size: 24px;
-  }
+        a {
+            text-decoration: none;
+            color: white;
+        }
 
-  #pageedit{
-    box-sizing: border-box;
+        table {
+            text-align: center;
+        }
 
-    width: 700px;
-    height: 69px;
-    margin-left: 5em;
-    top: 433px;
-    margin-bottom: 0.5em;
+        .title {
+            width: 70vh;
+        }
 
-    background: #FFFFFF;
-    border: 3px solid #F5F5F5;
-    border-radius: 10px;
-    font-size: 24px;
-  }
+        .pages {
+            width: 25%;
+        }
 
-  #butonedit{
-     margin-top: 10px;
-     margin-left: 5em;  
-     height: 67px;
-     background: #2B2136;
-     border-radius: 10px;
-     font-family: 'Inter';
+        .acoes {
+            width: 25%;
+        }
 
-     text-align: center;
-     font-weight: 700;
-     font-size: 24px;
-     color: #FFFFFF;
-     box-sizing: border-box;   
-     width: 700px;
-     cursor: pointer;
+        #editar{
+            color: #F0AD02;
+            margin-right: 2rem;
+        }
 
-  }
+        #trash{
+            color:#EA6055;
+        }
 
-  @media (max-width: 1300px){
-    .livro .cadastro input{ 
-        flex-direction: row;
-        margin-top: 25px; 
-        margin-right: 1.2em;
-        width: 350px;
-        height: 65px;
-    }
+        @media (min-width: 280px) and (max-width: 900px) {
+            body {
+                width: 100%;
+                height: 160vh;
+            }
 
-    form button{
-        margin-top: 25px;
-        width: 150px;
-        height: 65px;
-        font-size: 23px;
-        text-align: center;
-    }
-
-  }
-
-   @media (max-width: 1550px){
-    .livro .cadastro input{ 
-        flex-direction: row;
-        margin-top: 25px; 
-        margin-right: 1.2em;
-        width: 350px;
-        height: 65px;
-    }
-
-    form button{
-        margin-top: 25px;
-        width: 150px;
-        height: 65px;
-        font-size: 23px;
-        text-align: center;
-    }
-
-  }
-
-  @media (max-width: 1350px){
-    #edicao{
-        width: auto;
-        height: 58%;
-    }
-
-    .form-header h1{
-        margin-top: 40px;
-        margin-bottom: 10px;
-        margin-left: 2.1em;
-        font-size: 30px;
-        font-family: 'Tauri', sans-serif;
-    }
-    
-    #tituloedit{
-        margin-left: 3em;
-    }
-
-    #pageedit{
-        margin-left: 3em;
-    }
-
-    #butonedit{
-        margin-left: 3em;
-    }
-  }
-
-
-  </style>
+            .container {
+                width: 90%;
+                padding: 2rem;
+            }
+        }
+    </style>
     
 </head>
 <body>
