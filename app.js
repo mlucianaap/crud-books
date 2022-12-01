@@ -102,7 +102,7 @@ app.post('/edit', (req, res) => {
 const conn = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '', //Coloca a tua senha aqui
+    password: 'Tom100@g', //Coloca a tua senha aqui
     database: 'nodemysql1'
 });
 
