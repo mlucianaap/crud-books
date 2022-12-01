@@ -79,10 +79,6 @@ app.get('/edit/:idbooks?', (req, res) => {
     });
 });
 
-app.get('/edit', (req, res) => {
-    res.render('edit', { book: book });
-});
-
 app.post('/edit', (req, res) => {
     const idbooks = req.body.idbooks;
     const title = req.body.title;
