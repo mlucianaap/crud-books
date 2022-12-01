@@ -4,7 +4,7 @@ const conn = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '', //Coloca a tua senha aqui
-    database: 'mysql1'
+    database: 'nodemysql1'
 });
 
 conn.connect(function(err) {
